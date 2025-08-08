@@ -1,5 +1,6 @@
 out
 *.db
 .env
+.aws/
 assets/
 samples/

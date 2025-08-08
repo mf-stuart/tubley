@@ -126,6 +126,7 @@ func (c Client) UpdateVideo(video Video) error {
 	UPDATE videos
 	SET
 		title = ?,
+		updated_at = ?,
 		description = ?,
 		thumbnail_url = ?,
 		video_url = ?,
@@ -136,6 +137,7 @@ func (c Client) UpdateVideo(video Video) error {
 	_, err := c.db.Exec(
 		query,
 		video.Title,
+		video.UpdatedAt,
 		video.Description,
 		&video.ThumbnailURL,
 		&video.VideoURL,
